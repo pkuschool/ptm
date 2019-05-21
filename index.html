@@ -39,7 +39,7 @@
 
 <body class=" grey lighten-4 black-text">
     <div class="container center-align">
-        <h1>BDFZ家长会</h1>
+        <h1 onclick="easterEgg()"BDFZ家长会</h1>
         <div class="divider grey darken-3"></div>
         <p style="font-size: 3rem">请选择年级</p>
         <p>强烈建议使用平板、桌面端访问此网站。</p>
@@ -70,6 +70,7 @@
     </div>
 </div>
 <script>
+    var eggTitle = 0
     document.addEventListener('DOMContentLoaded', function () {
         var elems = document.querySelectorAll('.fixed-action-btn');
         var instances = M.FloatingActionButton.init(elems);
@@ -81,5 +82,12 @@
 
     function go(child = 0) {
         window.open("./grade" + child, '_self')
+    }
+
+    function easterEgg(){
+        eggTitle++;
+        if(!eggTitle%5){
+            alert("SubIT says: Why are you wandering here, looking at nothing? Or if you are just searching for easter eggs?")
+        }
     }
 </script>
