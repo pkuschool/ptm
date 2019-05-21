@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +31,8 @@
         p {
             margin-bottom: 0.5em !important;
         }
-        .row{
+
+        .row {
             margin-top: 20px !important;
         }
     </style>
@@ -130,7 +132,7 @@
             <h4>4.家长会反馈</h4>
             <p>当日活动结束，离校之前，烦请家长扫描西门处二维码，填写本次家校沟通的反馈问卷。</p>
             <p>真诚地希望通过这次家长交流活动以及后续借助家委会机制的常态化沟通，学校和家长共同助力孩子在学习和成长方面取得长足进步！</p>
-            <p class=" right-align right">北京大学附属中学<br>2019年5月15日</p>
+            <p class=" right-align right">北京大学附属中学<br>2019年5月22日</p>
             <br><br><br><br>
             <div class="divider blue darken-4"></div>
             <p style="font-size: 24px;" id="ifSubmit" v-if="visible">请问您是否提交了意愿？如果没有，请返回页面顶端提交。</p>
@@ -209,6 +211,12 @@
             html: "尚未开放"
         })
     }
+    var theif = new Vue({
+        el: "#ifSubmit",
+        data: {
+            visible: res == 1
+        }
+    })
 </script>
 
 </html>
